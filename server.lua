@@ -4,7 +4,7 @@ ServerWeather = "clear"
 allowgroups = {}
 
 -- Sets Weather: /weather YOURWEATHERTYPE. See Valid Weathertypes in Config also you can Change the user groups in the Config 
-ESX.RegisterCommand("weather", 'admin', function(source, args)
+ESX.RegisterCommand("weather", "", function(source, args)
     local xPlayer = source
     local Weather = false
     local group = xPlayer.getGroup()
@@ -15,7 +15,7 @@ ESX.RegisterCommand("weather", 'admin', function(source, args)
 
     if group  == allowgroups then
             if args[1] == nil then
-                xPlayer.showNotification("Du musst was Eingeben")
+                xPlayer.showNotification("Fehlerhafte eingabe: /weather weathertype")
                 return
             else
                 for _, WeatherNames in ipairs(Config.WeatherTypes) do
