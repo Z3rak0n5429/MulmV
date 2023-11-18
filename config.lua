@@ -1,7 +1,5 @@
 Config = {}
 
-Config.ServerGroups = {"user"}
-
 Config.WeatherTypes = {
     "BLIZZARD",
     "CLEAR",
@@ -19,3 +17,5 @@ Config.WeatherTypes = {
     "THUNDER",
     "XMAS",
 }
+
+Config.ServerGroups = {"admin"}
